@@ -36,3 +36,5 @@ In the project directory, you can run:
 
 ## Deployment
 
+The application is hosted on Netlify. [Go to App!](https://phenomenal-gingersnap-35492a.netlify.app/)
+
