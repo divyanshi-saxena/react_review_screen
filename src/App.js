@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import ReviewPage from './components/ReviewPage';
+import Toggle from './components/Toggle';
+import useLocalStorage from 'use-local-storage';
+import AppContextProvider from './context/app/AppContextProvider';
 
 function App() {
+  const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [darkMode, setDarkMode] = useLocalStorage("darkMode", preference);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContextProvider>
+      <div className="App" data-theme={darkMode ? "dark" : ""}>
+        <Toggle
+          isChecked={darkMode}
+          handleChange={() => setDarkMode(!darkMode)}
+        />
+        <ReviewPage />
+      </div>
+    </AppContextProvider>
   );
 }
 

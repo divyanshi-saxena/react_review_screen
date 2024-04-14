@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+## Problem Statement
+Create a Review Screen page using React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## Functional Requirements
 
 In the project directory, you can run:
 
-### `npm start`
+### `Right Sidebar`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Displays all fields present in image from `sections.json` file 
+- Checking/un-checking the checkbox corresponding to each field will reflect the selection on the image
+- Deleting a field will remove it from the state level
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `Document Previewer`
 
-### `npm test`
+- Displays the full image highlighting all the sidebar items
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Field Highlighting`
 
-### `npm run build`
+- Fields on the image get highlighted as the sidebar items get selected or deselected
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Review Actions`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Select All button will select all the sidebar items
+- Confirm button will be active only if atleast one sidebar item is checked
+- Clicking the confirm button will render a modal to confirm the selection which will render another modal on clicking save
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Non-Functional Requirements
 
-### `npm run eject`
+- Toggle functionality added for light/dark theme change
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## General Notes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- App created using CRA
+- Apart from react packages, `use-local-storage` library used to store the theme in the local storage to persist after page reload
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
